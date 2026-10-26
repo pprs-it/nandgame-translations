@@ -1,26 +1,10 @@
 {
     "missions": {
-        "INV": {
-            "title": "Invertieren",
-            "splash": "<p>Willkommen zum <b>Nand Spiel</b></p>\n\n <p>Hier kannst Du einen einfachen Computer bauen.\n <p>Du fängst mit einem einfachen Bauteil an, dem <b>nand</b> gatter.\nNur mit diesem Baustein kannst Du alle anderen Komponenten bauen.\n\n <p>Deine erste Aufgabe ist es, einen <b>Inverter</b> zu bauen.\n <p>Auf der linken Seite findest Du die exakte Beschreibung der Aufgabe.\n Unter dem Diagramm sind weitere hilfreiche Tips.",
-            "specification": "<p>Die erste Aufgabe ist es, einen Umkehrer (<b>inv</b>) zu bauen.",
-            "hints": {
-                "0": { "html": "<b>Schritt 1:</b> Ziehe Komponenten aus dem Werkzeugkasten in den blauen Bereich" },
-                "1": { "html": "<b>Schritt 2:</b> Klicke den Pfeil um einen Eingang auszuwählen, dann klicke auf den Ausgang einer Komponente um eine Verbindung herzustellen." },
-                "2": { "html": "Spezifikation für die zu bauende Komponente. <p>Für alle möglichen Eingangswerte sollten alle Ausgänge die korrekten Werte haben." },
-                "3": { "html": "Klicke auf das Kästchen um das Eingangssignal umzukehren und zu sehen wie es Deinen Schaltkreis beeinflusst." },
-                "4": { "html": "Klicke hier wenn Du glaubst daß Du den Schaltkreis korrekt aufgebaut hast." }
-            },
-            "elaboration": "<h3>Einführung</h3>\n <p>Das Nand Game führt Dich schrittweise durch den Bau eines einfachen Computers, beginnend mit den einfachsten Bauelementen. Man braucht keine Vorkenntnisse, insbesondere kein Wissen über Computerarchitektur oder Software. Es erfordert auch keine Mathematikkenntnisse außer Addition und Subtraktion.\n\nEs erfordert aber etwas Geduld - die Lösung einiger Aufgaben brauchen etwas Zeit.\n\n <p>Das Spiel besteht aus mehreren Levels.\nIn jedem Level ist Deine Aufgabe, eine Komponente zu bauen die ensprechend einer Spezifikation funktioniert.\n\nDiese Komponente kann dann in späteren Levels als Baustein genutzt werden.\n\n <p>Die Spezifikation aller Komponenten beschreibt welche Eingabesignale zu welchen Ausgabesignalen führen sollten.\nWie Du den Schaltkreis aufbaust ist Dir überlassen, solange die Ausgangssignale für alle möglichen Eingangssignale korrekt sind.\nEs macht keinen Unterschied ob Du die einfachste oder effizienteste Möglichkeit gefunden hast.\n Wichtig ist nur daß die Komponente korrekt funktioniert.\n\n <p>Die erste Aufgabe ist der Bau einer <b>Umkehrer</b> Komponente.\n <p>Der <b>Umkehrer</b> hat einen Eingang und einen Ausgang. Dies ist die Spezifikation:\n\n <table class='data'>\n <tr><th>Input</th><th>Output</th></tr>\n <tr><td>0</td><td>1</td></tr>\n <tr><td>1</td><td>0</td></tr>\n </table>\n\n <h3>Das Nand-Gatter</h3>\n\n <p>Die einzige Komponente die am Anfang verfügbar ist ist das NAnd-Gatter. Das NAnd-Gatter ist ein fundamentaler Baustein mit dem man alle anderen Bausteine bauen kann.\n\n <p>Ein <b>NAnd</b>-Gatter hat zwei Eingänge und einen Ausgang. Die Spezifikation ist die folgende:\n\n <table class='data'>\n <tr><th colspan=2>Input</th><th>Output</th></tr>\n <tr><th>a</th><th>b</th><th></th></tr>\n <tr><td>0</td><td>0</td><td>1</td></tr>\n <tr><td>1</td><td>0</td><td>1</td></tr>\n <tr><td>0</td><td>1</td><td>1</td></tr>\n <tr><td>1</td><td>1</td><td>0</td></tr>\n </table>\n\n <p>Um die Spezifikation einer Komponente zu sehen, klicke auf ihr 🛈 Symbol.\n\n <h3>User guide</h3>\n\n <p>The objective for the level is always described in the box to left of the canvas.\n The text below the canvas (what you are reading now) contains additional information and hints.\n\n <p>You build the circuit by dragging components\n from the toolbox left of the canvas, and connect them by dragging the arrowheads from the output-connectors to input-connectors.\n\n <p>You can manually test the circuit by toggling the input box at the bottom (the small checkbox).\n\n <p>When you believe you have designed the component correctly, click \"Check solution\".\n The system verifies if the circuit you have designed corresponds to the specification. If it does you can proceed to the next level.\n\n <div class=subject>\n <h3>About 0 and 1</h3>\n <p>Input and output signals can be either 0 or 1.\n There is no other option or middle ground. This reflects the fundamental principle of digital systems:\n They only distinguish between two distinct states.\n In an electrical circuit this corresponds to high and low current. But we don't care about how it works on the physical level, we just treat them as logical states.\n </div>\n\n <div class=subject>\n <h3>Where does the NAND-gate come from?</h3>\n <p>In this game we use the <b>nand</b>-gate as the most fundamental building blocks. The nand gate itself is built from transistors. A transistor is basically an electrical switch.\n A nand gate is built from two or four transistors, depending on the type of transistors used.\n </div>",
-            "debriefing": "Die <b>inv</b>-Komponente ist nun zu Deinem Werkzeugkasten hinzugefügt worden. Sie kann als Baustein bei den nächsten Aufgaben genutzt werden."
-        },
-        "AND": {
-            "title": "Und",
-            "splash": "<p>Die nächste Aufgabe ist der Bau eines <b>and</b>-Gatters. Als Komponenten stehen nur die <b>nand</b> un <b>inv</b> Komponenten zur Verfügung.\n\n (Eventuell braucht man nicht alle Komponenten um die Aufgabe zu lösen.)",
-            "specification": "<p>Der Ausgang eines <b>and</b>-Gatters ist 1 wenn beide Eingänge den Wert 1 haben.",
-            "hints": { "0": { "html": "Die <b>inv</b>-Komponente ist jetzt im Werkzeugkasten." } },
-            "spoilers": [ "\"NAND\" is eine Abkürzung für \"Negative AND\", also \"Negatives UND\"." ]
-        },
-        "OR": { "title": "Oder" }
+    },
+    "components": {
+    },
+    "texts": {
+    },
+    "ui": {
     }
 }
