@@ -2,6 +2,97 @@
     "missions": {
     },
     "components": {
+      "RELAY-ON": {
+        "name": "Ruhestromrelais",
+        "help": "<b>Ruhestromrelais</b>. Ein elektrischer Schalter, der normalerweise <b>in</b> und den Ausgang verbindet. Wenn an <b>c</b> eine Spannung anliegt, wird die Verbindung getrennt."
+      },
+      "RELAY-OFF": {
+        "name": "Arbeitsstromrelais",
+        "help": "<b>Arbeitsstromrelais</b>. Ein elektrischer Schalter, der <b>in</b> nur dann mit dem Ausgang verbindet, wenn an <b>c</b> eine Spannung anliegt."
+      },
+      "NAND": {
+        "name": "nand",
+        "help": "<b>NAND</b>-Gatter. Der Ausgang wird nur dann 0, wenn alle Eingänge 1 sind.\n<table class=\"truth\">\n<tr><th colspan=\"2\">Eingänge</th><th rowspan=\"2\">Ausgang</th></tr>\n<tr><th>a</th><th>b</th></tr>\n<tr><td>0</td><td>0</td><td>1</td></tr>\n<tr><td>1</td><td>0</td><td>1</td></tr>\n<tr><td>0</td><td>1</td><td>1</td></tr>\n<tr><td>1</td><td>1</td><td>0</td></tr>\n</table>"
+      },
+      "INV": {
+        "name": "inv",
+        "help": "<b>NOT</b>-Gatter. Der Eingang wird invertiert.\n<table class=\"truth\">\n<tr><th>Eingang</th><th>Ausgang</th></tr>\n<tr><td>0</td><td>1</td></tr>\n<tr><td>1</td><td>0</td></tr>\n</table>"
+      },
+      "AND": {
+        "name": "and",
+        "help": "<b>AND</b>-Gatter. Der Ausgang wird nur dann 1, wenn alle Eingänge 1 sind.\n<table class=\"truth\">\n<tr><th colspan=\"2\">Eingänge</th><th rowspan=\"2\">Ausgang</th></tr>\n<tr><th>a</th><th>b</th></tr>\n<tr><td>0</td><td>0</td><td>0</td></tr>\n<tr><td>1</td><td>0</td><td>0</td></tr>\n<tr><td>0</td><td>1</td><td>0</td></tr>\n<tr><td>1</td><td>1</td><td>1</td></tr>\n</table>"
+      },
+      "OR": {
+        "name": "or",
+        "help": "<b>OR</b>-Gatter. Der Ausgang wird nur dann 1, wenn mindestens ein Eingang 1 ist.\n<table class=\"truth\">\n<tr><th colspan=\"2\">Eingänge</th><th rowspan=\"2\">Ausgang</th></tr>\n<tr><th>a</th><th>b</th></tr>\n<tr><td>0</td><td>0</td><td>0</td></tr>\n<tr><td>1</td><td>0</td><td>1</td></tr>\n<tr><td>0</td><td>1</td><td>1</td></tr>\n<tr><td>1</td><td>1</td><td>1</td></tr>\n</table>"
+      },
+      "XOR": {
+        "name": "xor",
+        "help": "<b>XOR</b>-Gatter (exklusives OR). Der Ausgang wird nur dann 1, wenn die Eingänge unterschiedliche Werte haben.\n<table class=\"truth\">\n<tr><th colspan=\"2\">Eingänge</th><th rowspan=\"2\">Ausgang</th></tr>\n<tr><th>a</th><th>b</th></tr>\n<tr><td>0</td><td>0</td><td>0</td></tr>\n<tr><td>1</td><td>0</td><td>1</td></tr>\n<tr><td>0</td><td>1</td><td>1</td></tr>\n<tr><td>1</td><td>1</td><td>0</td></tr>\n</table>"
+      },
+      "INV16": {
+        "name": "inv 16",
+        "help": "16-bit <b>NOT</b>-Gatter. Jedes der 16 Bits wird invertiert.\n<table class=\"truth\">\n<tr><th>Eingang</th><th>Ausgang</th></tr>\n<tr><td>0</td><td>1</td></tr>\n<tr><td>1</td><td>0</td></tr>\n</table>"
+      },
+      "AND16": {
+        "name": "and 16",
+        "help": "16-bit <b>AND</b>-Gatter. Jedes der 16 Bits der Eingänge wird mit AND verknüpft. So wird das erste Bit des ersten Eingangs mit dem ersten Bit des zweiten Eingangs verknüpft, das zweite mit dem zweiten, und so weiter.\n<table class=\"truth\">\n<tr><th colspan=\"2\">Eingänge</th><th rowspan=\"2\">Ausgang</th></tr>\n<tr><th>a</th><th>b</th></tr>\n<tr><td>0</td><td>0</td><td>0</td></tr>\n<tr><td>1</td><td>0</td><td>0</td></tr>\n<tr><td>0</td><td>1</td><td>0</td></tr>\n<tr><td>1</td><td>1</td><td>1</td></tr>\n</table>"
+      },
+      "HALFADD": {
+        "name": "add",
+        "help": "<b>Halbaddierer</b>. Bildet die Summe aus zwei einstelligen Binärzahlen.\n<table class=\"truth\">\n<tr><th colspan=\"2\">Eingänge</th><th colspan=\"2\">Ausgänge</th></tr>\n<tr><th>a</th><th>b</th><th>h</th><th>l</th></tr>\n<tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>\n<tr><td>1</td><td>0</td><td>0</td><td>1</td></tr>\n<tr><td>0</td><td>1</td><td>0</td><td>1</td></tr>\n<tr><td>1</td><td>1</td><td>1</td><td>0</td></tr>\n</table>"
+      },
+      "ADDC": {
+        "name": "add",
+        "help": "<b>Volladdierer</b>. Bildet die Summe aus drei einstelligen Binärzahlen.\n<table class=\"truth\">\n<tr><th colspan=\"3\">Eingänge</th><th colspan=\"2\">Ausgänge</th></tr>\n<tr><th>a</th><th>b</th><th>c</th><th>h</th><th>l</th></tr>\n<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\n<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>\n<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>\n<tr><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>\n<tr><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td></tr>\n<tr><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>\n<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>\n<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>\n</table>"
+      },
+      "ADD16": {
+        "name": "add 16",
+        "help": "<b>16-bit Addierer</b>. Bildet die Summe aus zwei 16-stelligen Binärzahlen. Der Übertrag wird dabei ignoriert, d.&nbsp;h. dass Ergebnisse über 65535 wieder bei 0 anfangen. So ergibt bspw. die Rechnung \"32768 + 32769\" nicht etwa 65537, sondern 1."
+      },
+      "ADDC16": {
+        "name": "add 16",
+        "help": "<b>16-bit Addierer</b>. Bildet die Summe aus zwei 16-stelligen Binärzahlen (<b>S</b>) sowie den einstelligen Übertrag (<b>c</b>)."
+      },
+      "INC16": {
+        "name": "inc 16",
+        "help". "<b>Inkrement</b>. Addiert 1 zu einer 16-stelligen Binärzahl."
+      },
+      "SUB16": {
+        "name": "sub 16",
+        "help": "<p><b>16-bit Subtrahierer</b>. Subtrahiert eine 16-stellige Binärzahl von einer anderen.</p><p>Ergebnisse werden im Zweierkomplement dargestellt. Das bedeutet, dass die höchste Stelle bei positiven Zahlen gleich 0 ist und bei negativen gleich 1.</p>"
+      },
+      "ZERO": {
+        "name": "0",
+        "help": "Immer <b>0</b>."
+      },
+      "ZERO16": {
+        "name": "0",
+        "help": "Immer eine 16-stellige Binärzahl, bei der alle Stellen <b>0</b> sind."
+      },
+      "ISZERO": {
+        "name": "is zero",
+        "help": "Der Ausgang wird nur dann 1, wenn die 16-stellige Binärzahl gleich 0 ist."
+      },
+      "ISNEG": {
+        "name": "is neg",
+        "help": "<p>Der Ausgang wird nur dann 1, wenn die 16-stellige Binärzahl negativ ist.</p><p>Zahlen werden im Zweierkomplement dargestellt. Das bedeutet, dass bei negativen Zahlen die höchste Stelle gleich 1 ist.</p>"
+      },
+      "SPLIT16": {
+        "name": "splitter",
+        "help": "<b>Trenner</b>. Teilt eine 16-stellige Binärzahl in die einzelnen Stellen auf."
+      },
+      "BUNDLE16": {
+        "name": "bundler",
+        "help": "<b>Bündler</b>. Bildet aus den einzelnen Stellen eine 16-stellige Binärzahl."
+      },
+      "SELECT": {
+        "name": "select",
+        "help": "<b>Auswahl</b>. Ein Eingang (<b>s</b>) steuert, welcher der beiden anderen Eingänge (<b>d0</b>, <b>d1</b>) ausgegeben wird.\n<table class=\"truth\">\n<tr><th>Eingang</th><th rowspan=\"2\">Ausgang</th></tr>\n<tr><th>s</th></tr>\n<tr><td>0</td><td>d0</td></tr>\n<tr><td>1</td><td>d1</td></tr>\n</table>"
+      },
+      "DECODER": {
+
+      }
     },
     "texts": {
     },
